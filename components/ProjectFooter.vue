@@ -9,6 +9,9 @@
 
 <style scoped>
 footer {
-  margin-top: 5rem;
+  margin: 5rem 0rem 2rem;
+}
+a {
+  color: black;
 }
 </style>

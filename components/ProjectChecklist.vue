@@ -1,82 +1,47 @@
 <template>
   <section>
     <h2>Checklist Goedemiddag!</h2>
-
     <details>
-      <summary>Toegankelijkheid</summary>
+      <AtomsSummaryItem summaryTitle="♿ Toegankelijkheid" />
       <ul>
-        <li>
-          <input type="checkbox" id="color-contrast" />
-          <label for="color-contrast">Kleuren contrast</label>
-        </li>
-        <li>
-          <input type="checkbox" id="alt-text" />
-          <label for="alt-text">Alt tekst</label>
-        </li>
-        <li>
-          <input type="checkbox" id="tab" />
-          <label for="tab">Pagina doortabbaar</label>
-        </li>
-        <li>
-          <input type="checkbox" id="screenreader" />
-          <label for="screenreader">Screenreader</label>
-        </li>
-        <li>
-          <input type="checkbox" id="responsive" />
-          <label for="responsive">Responsive</label>
-        </li>
-        <li>
-          <input type="checkbox" id="semantic-html" />
-          <label for="semantic-html">Semantische HTML</label>
-        </li>
+        <MoleculesDetailsListItem
+          id="color-contrast"
+          title="Kleuren contrast"
+        />
+        <MoleculesDetailsListItem id="alt-text" title="Alt tekst" />
+        <MoleculesDetailsListItem id="tab" title="Pagina doortabbaar" />
+        <MoleculesDetailsListItem id="screenreader" title="Screenreader" />
+        <MoleculesDetailsListItem id="responsive" title="Responsive" />
+        <MoleculesDetailsListItem id="semantic-html" title="Semantische HTML" />
       </ul>
     </details>
 
     <details>
-      <summary>Performance</summary>
+      <AtomsSummaryItem summaryTitle="⏱️ Performance" />
       <ul>
-        <li>
-          <input type="checkbox" id="fcp" />
-          <label for="fcp">First Contentful Paint</label>
-        </li>
-        <li>
-          <input type="checkbox" id="lcp" />
-          <label for="lcp">Largest Contentful Paint</label>
-        </li>
-        <li>
-          <input type="checkbox" id="tbt" />
-          <label for="tbt">Total Blocking Time</label>
-        </li>
-        <li>
-          <input type="checkbox" id="cls" />
-          <label for="cls">Cumulative Layout Shift</label>
-        </li>
-        <li>
-          <input type="checkbox" id="si" />
-          <label for="si">Speed Index</label>
-        </li>
+        <MoleculesDetailsListItem id="fcp" title="First Contentful Paint" />
+        <MoleculesDetailsListItem id="lcp" title="Largest Contentful Paint" />
+        <MoleculesDetailsListItem id="tbt" title="Total Blocking Time" />
+        <MoleculesDetailsListItem id="cls" title="Cumulative Layout Shift" />
+        <MoleculesDetailsListItem id="si" title="Speed Index" />
       </ul>
     </details>
 
     <details>
-      <summary>Huisstijl</summary>
+      <AtomsSummaryItem summaryTitle="💅 Huisstijl" />
       <ul>
-        <li>
-          <input type="checkbox" id="favicon" />
-          <label for="favicon">Favicon</label>
-        </li>
-        <li>
-          <input type="checkbox" id="logo" />
-          <label for="logo">Logo</label>
-        </li>
-        <li>
-          <input type="checkbox" id="colors" />
-          <label for="colors">Kleurenschema</label>
-        </li>
-        <li>
-          <input type="checkbox" id="typografie" />
-          <label for="typografie">Typografie</label>
-        </li>
+        <MoleculesDetailsListItem id="favicon" title="Favicon" />
+        <MoleculesDetailsListItem id="logo" title="Logo" />
+        <MoleculesDetailsListItem id="colors" title="Kleurenschema" />
+        <MoleculesDetailsListItem id="typografie" title="Typografie" />
+        <MoleculesDetailsListItem id="icons" title="Icons" />
+      </ul>
+    </details>
+    <details>
+      <AtomsSummaryItem summaryTitle="📄 Pagina's" />
+      <ul>
+        <MoleculesDetailsListItem id="homepage" title="Homepagina" />
+        <MoleculesDetailsListItem id="error" title="Error pagina" />
       </ul>
     </details>
   </section>
@@ -88,7 +53,11 @@ ul {
   padding-left: 0;
 }
 section {
-  background-color: var(--color1);
+  background-color: var(--color5);
   padding: 1rem 1rem 3rem;
+  border-radius: 1rem;
+}
+summary:hover {
+  cursor: pointer;
 }
 </style>

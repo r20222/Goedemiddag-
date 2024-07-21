@@ -7,4 +7,9 @@
     </p>
   </header>
 </template>
-<style></style>
+
+<style>
+header {
+  padding: 1rem;
+}
+</style>
